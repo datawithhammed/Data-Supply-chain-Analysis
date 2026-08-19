@@ -236,5 +236,165 @@ The dominance of late delivery over all other statuses combined confirms this is
 
 
 
+---
+ 
+## 📄 Page 5 — Risk Analysis
+### *"What are we losing to fraud and cancellations?"*
+ 
+The final page addresses a critical question that goes beyond standard supply chain metrics — **what hidden risk exists within DataCo's order base?** This page investigates the relationship between cancelled orders, suspected fraud, payment methods and market exposure.
+ 
+### Key Metrics
+| KPI | Value |
+|---|---|
+| Cancelled Orders | **1,367** |
+| Suspected Fraud Orders | **1,488** |
+| Total Orders "At Risk" | **2,855** |
+| Total Revenue "At Risk" | **$1.41M** |
+| High Risk Payment Type | **TRANSFER** |
+
+ <img width="1117" height="629" alt="Screenshot 2026-08-18 173536" src="https://github.com/user-attachments/assets/c6720958-dbe9-4974-94a3-8e33a0ccc3c0" />
 
 
+
+ 
+### Key Findings
+ 
+#### 1. Fraud Outpaces Cancellations
+At 1,488 suspected fraud orders vs 1,367 cancellations, **fraud is actually the bigger problem** — both in order count and in revenue impact ($741K for fraud vs $668K for cancellations). Together they put **$1.41M of revenue at risk** — 4.26% of total net revenue.
+
+
+
+ 
+#### 2. The TRANSFER Payment Red Flag — 100% Correlation
+This is the single most alarming finding of the entire dashboard:
+ 
+**100% of all at-risk orders — both cancelled and suspected fraud — exclusively use TRANSFER as the payment method.** Not a single at-risk order was paid via Debit, Cash or standard Payment methods.
+ 
+This is not a statistical coincidence. It is a **clear, actionable pattern** that DataCo's risk management team can act on immediately. A simple rule flagging Transfer payment orders for additional verification before processing could theoretically prevent all 2,855 at-risk orders from ever being fulfilled.
+
+<img width="769" height="359" alt="image" src="https://github.com/user-attachments/assets/58dd6a37-3c66-4c54-a19d-43b6299c7842" />
+
+
+#### 3. Europe Carries the Highest At-Risk Order Volume
+| Market | At Risk Orders |
+|---|---|
+| **Europe** | **798** |
+| LATAM | 767 |
+| Pacific Asia | 724 |
+| USCA | 401 |
+| Africa | 165 |
+ 
+Europe leads in both total orders and at-risk orders — suggesting its high order volume comes with a proportionally higher fraud and cancellation exposure.
+
+
+
+#### 4. Late Delivery Does NOT Cause At-Risk Orders
+The *"Does Late Delivery Cause Orders At Risk?"* dual-line chart provides crucial analytical clarity. By plotting Late Delivery % against At-Risk Orders across all shipping modes, the lines move in **opposite directions** — proving there is no correlation between late deliveries and order cancellations or fraud.
+ 
+This means **late delivery and at-risk orders are two entirely separate operational problems** with different root causes requiring different solutions:
+- Late deliveries → caused by shipping mode inefficiencies
+- At-risk orders → caused exclusively by Transfer payment fraud patterns
+
+<img width="973" height="393" alt="image" src="https://github.com/user-attachments/assets/574cd49e-b374-43ac-ad66-1c622616abef" />
+
+
+
+
+
+#### 5. Consumer Segment Carries the Most Risk
+By customer segment, Consumers account for **1,505 at-risk orders** — more than Corporate (839) and Home Office (511) combined. This aligns with the earlier finding that Consumer is the dominant order segment, but also suggests individual buyers are more susceptible to fraud patterns or more likely to cancel.
+ 
+---
+ 
+
+
+
+## 💡 Strategic Recommendations
+ 
+Based on the five-page analysis, I identified the following high-priority recommendations for DataCo's leadership:
+ 
+### 1. 🚨 Overhaul the Discounting Strategy (Highest Priority)
+Replace the blanket 10.15% discount applied uniformly across all products with a **margin-aware discount framework**. Products with low profit ratios should either receive no discount or be repriced. This single change could recover a significant portion of the ($3.88M) in losses.
+ 
+### 2. 🚨 Flag Transfer Payments for Fraud Review
+Implement an **automated payment screening rule** that flags all Transfer payment orders for manual verification or additional authentication before fulfillment. Given the 100% correlation between Transfer payments and at-risk orders, this is the most immediately actionable fraud prevention measure available.
+ 
+### 3. 🔴 Investigate and Fix First Class Shipping
+Conduct an urgent operational review of the First Class delivery process. With a **95.32% late delivery rate**, customers are paying a premium for a service that is almost guaranteed to disappoint. Either the scheduled delivery windows must be extended to realistic timeframes or fulfillment prioritization must be restructured.
+ 
+### 4. 🟠 Focus Growth Efforts on Africa
+Africa is significantly underperforming relative to other markets in both order volume and revenue — but it also carries the **lowest at-risk order rate**. This makes it a potentially high-quality growth market where targeted expansion could yield profitable, low-risk revenue growth.
+ 
+### 5. 🟠 Prioritize Standard Class Infrastructure
+Since Standard Class generates the most profit and has the lowest late delivery rate, investing in its infrastructure and capacity would yield the highest return on operational investment.
+ 
+---
+  
+
+ 
+## 🛠️ Technical Details
+ 
+### Tools & Technologies
+- **Excel (Power Query)**- Data Cleaning and transformation  
+- **Microsoft Power BI Desktop** — Dashboard design and visualization
+- **DAX (Data Analysis Expressions)** — All KPI calculations and measures
+
+
+### Dataset Summary
+| Attribute | Detail |
+|---|---|
+| Source | DataCo Smart Supply Chain Dataset (Kaggle) |
+| Rows | 180,519 |
+| Columns | 53 |
+| Date Range | January 2015 – December 2018 |
+| Markets Covered | Europe, LATAM, Pacific Asia, USCA, Africa |
+| Unique Orders | 65,752 |
+| Product Categories | 45+ categories across 7 departments |
+
+ 
+---
+
+
+ ## 📊 Summary of Key Numbers
+ 
+| Metric | Value |
+|---|---|
+| Net Total Sales | $33.05M |
+| Gross Sales (Before Discount) | $36.78M |
+| Revenue Lost to Discounts | $3.73M |
+| Total Profit | $3.97M |
+| Total Loss Amount | ($3.88M) |
+| Profit Margin | 12.00% |
+| Total Unique Orders | 65,752 |
+| Peak Year | 2015 ($11.09M) |
+| Top Market | Europe ($9.77M) |
+| Top Department | Fan Shop ($15.38M) |
+| Top Category | Fishing ($6.23M) |
+| On Time Delivery Rate | 40.88% |
+| Late Delivery Rate | 54.83% |
+| Worst Shipping Mode | First Class (95.32% late) |
+| Best Shipping Mode | Standard Class (38.07% late) |
+| Cancelled Orders | 1,367 |
+| Suspected Fraud Orders | 1,488 |
+| Total At Risk Orders | 2,855 |
+| Total At Risk Revenue | $1.41M |
+| High Risk Payment Type | TRANSFER (100%) |
+ 
+---
+
+
+## 🔑 Conclusion
+ 
+The DataCo Supply Chain Performance Review reveals a business that is **growing in volume but shrinking in quality**. Sales are declining year on year since 2015, losses are growing proportionally with orders, more than half of all deliveries arrive late, and a hidden fraud pattern tied exclusively to Transfer payments is putting $1.41M in revenue at risk.
+ 
+The most important insight from this analysis is not any single metric — it is the **story that connects them all**: DataCo is applying blanket discounts that eat into margins, shipping products through modes that consistently fail customers, and processing fraudulent orders through a payment channel that could be screened with a simple rule.
+ 
+These are not unsolvable problems. They are data-driven opportunities waiting for action — and that is exactly what this dashboard was built to surface.
+ 
+---
+ 
+*Built with 💪 by Hammed Adeoye | Data Analyst*
+
+*Connect with me: hammedadeoye2000@gmail.com*
+
+*LinkedIn : https://www.linkedin.com/in/hammed-adeoye-maami/*
